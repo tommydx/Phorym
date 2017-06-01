@@ -1,0 +1,31 @@
+MAIN PASGE - VIEW: PAGE HEADER (link to forum rules / link to user profiles page)
+		   POST FLOW (user posts to forum)
+		   AUTHOR SIDEBAR (username link to author profile info)
+		   NEW POST FORM (text field and option to submit to the database)
+			—posts attached to POST FLOW view
+
+RULES - VIEW: FORUM RULES
+	      RETURN BUTTON
+
+USER PROFILES - VIEW: USER PROFILES (each user profile)
+		      PICTURE
+		      USERNAME
+		      INFO
+		      (click username to enter detailed info)
+		      NEW USER FORM (username / email / bio)
+			—submit to database and attached to USER PROFILES view
+
+
+SINGLE USER PROFILE - VIEW: DETAILED USER INFO
+			    NUMBER OF POSTS TO FORUM
+			    LIST OF POSTS
+			    DELETE OPTION (author/admin)
+
+USER POST - VIEW: DELETE BUTTON (for author/admin)
+		  POST TEXT AND USERNAME (username always link to user profile)
+		  COMMENTS
+		  SUBMIT FORM (comment text field and submit button to database)
+			—comments attached to POST view
+
+
+
