@@ -17,9 +17,12 @@
   },
   "homepage": "https://github.com/tommydx/WDI-Project-2#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
     "method-override": "^2.3.9",
+    "morgan": "^1.8.2",
     "pg-promise": "^5.8.1"
   }
 }

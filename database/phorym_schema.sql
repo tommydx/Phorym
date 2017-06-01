@@ -16,5 +16,5 @@ comments
 (id BIGSERIAL PRIMARY KEY,
  cbody text NOT NULL,
  post_id INTEGER NOT NULL,
- FOREIGN KEY (posts_id) REFERENCES posts(id)
+ FOREIGN KEY (post_id) REFERENCES posts(id)
 );
