@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PHORYM</title>
+  </head>
+  <body>
+    <h1>PHORYM</h1>
+    <% posts.forEach((post) => { %>
+      <div>
+        <a href="/posts/<%= post.id %>"><%= post.name %></a>
+      </div>
+    <% }); %>
+  </body>
+</html>
