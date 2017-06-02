@@ -32,12 +32,12 @@ router.get("/:postId", (req, res) => {
         });
       });
   }).catch(console.error);
-})
+});
 
 // update controller => edit.ejs
-router.put('/:postId', () => {})
+router.put('/:postId', () => {});
 
 // delete controller
-router.delete('/:postId', () => {})
+router.delete('/:postId', () => {});
 
 module.exports = router;

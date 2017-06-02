@@ -13,8 +13,8 @@ const PORT = process.argv[2] || process.argv.PORT || 3000;
 
 const app = express();
 
-app.set("view.engine", "ejs")
+app.set("view.engine", "ejs");
 
-app.use(router)
+app.use(router);
 
 app.listen(3000, () => console.log("running"));
