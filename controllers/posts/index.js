@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
-const Posts = require('../../models/houses');
+const Posts = require('../../models/posts.js');
 
 router.get("/", (req, res) => {
-  res.render(path.join(__dirname + '/../views/posts/index.ejs'))
+  res.render(path.join(__dirname + '/../../views/posts/index.ejs'))
 });
 
 // index controller
@@ -23,10 +23,10 @@ router.get("/", (req, res) => {
 router.get("/:postId", (req, res) => {
   posts.find(req.params.postId)
   .then((post) => {
-      // get students that belong to that house
+      // get comments attached to post
       Comments.findByPost(req.params.postId)
       .then((comments) => {
-        res.render(path.join(__dirname + '/../../views/posts/show.ejs'), {
+        res.render(path.join(__dirname + '/../../views/posts/index.ejs'), {
           post: post[0],
           comments: comments
         });
