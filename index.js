@@ -2,7 +2,7 @@
 
 require('dotenv').config();
 const express        = require('express');
-const router         = express.Router();
+const router         = require('./router.js');
 const logger         = require('morgan');
 const path           = require('path');
 const bodyParser     = require('body-parser');
