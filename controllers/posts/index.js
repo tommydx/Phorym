@@ -21,10 +21,10 @@ router.get("/", (req, res) => {
 
 // show or get controller
 router.get("/:postId", (req, res) => {
-  posts.find(req.params.postId)
+  Posts.find(req.params.postId)
   .then((post) => {
       // get comments attached to post
-      Comments.findByPost(req.params.postId)
+      Comments.findAll(req.params.postId)
       .then((comments) => {
         res.render(path.join(__dirname + '/../../views/posts/index.ejs'), {
           post: post[0],
