@@ -11,7 +11,7 @@
     <div class="responses">
       <% comments.forEach((comment) => { %>
         <div>
-          <a href="/post/<%= post.id %>"><%= post.name %></a>
+          <a href="/post/<%= post.id %>"><%= post.title %>, <%= post.body %></a>
         </div>
       <% }); %>
     </div>
