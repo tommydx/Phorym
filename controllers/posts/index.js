@@ -7,30 +7,42 @@ const Posts = require('../../models/posts');
 
 // index controller
 router.get("/", (req, res) => {
+  console.log(req.url)
   Posts.findAll()
-  .then((posts) => {
-    console.log(posts);
+  .then((postsdata) => {
+    console.log(postsdata);
     res.render(path.join(__dirname + '/../../views/posts/index.ejs'), {
-      posts: posts
+      posts: postsdata
     });
   })
   .catch(console.error);
 });
 
 // show or get controller
-router.get("/:postId", (req, res) => {
+router.get("/posts/:postId", (req, res) => {
   Posts.find(req.params.postId)
-  .then((post) => {
-      // get comments attached to post
-      Comments.findAll(req.params.postId)
-      .then((comments) => {
-        res.render(path.join(__dirname + '/../../views/posts/index.ejs'), {
-          post: post[0],
-          comments: comments
-        });
-      });
+  .then((postdata) => {
+    console.log(postdata);
+    res.render('posts/show.ejs', {
+      post: postdata
+    });
   }).catch(console.error);
 });
+
+// // show or get controller
+// router.get("/:postId", (req, res) => {
+//   Posts.find(req.params.postId)
+//   .then((post) => {
+//       // get comments attached to post
+//       Comments.findAll(req.params.postId)
+//       .then((comments) => {
+//         res.render(path.join(__dirname + '/../../views/comments/index.ejs'), {
+//           post: post[0],
+//           comments: comments
+//         });
+//       });
+//   }).catch(console.error);
+// });
 
 // update controller => edit.ejs
 router.put('/:postId', () => {});

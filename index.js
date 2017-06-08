@@ -12,7 +12,7 @@ const methodOverride = require('method-override');
 const PORT = process.argv[2] || process.argv.PORT || 3000;
 
 const app = express();
-
+app.use(bodyParser.urlextended({extended:false}))
 app.set("view.engine", "ejs");
 
 app.use(router);
